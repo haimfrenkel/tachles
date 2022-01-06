@@ -24,6 +24,7 @@ public class User extends BaseModel {
     private Address address;
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private BankAccount bankAccount;
+    private Date dateOfMarriage;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "user")
     private List<Child> children;
     private String shtibel;
